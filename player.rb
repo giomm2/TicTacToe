@@ -1,7 +1,12 @@
 class Player
-	attr_accessor :name, :sign
+	attr_accessor :name, :computer, :player_turn
 
-	def player_turn(player,tic_tac_toe)
+	def initialize(name)
+		@name = name
+		@computer = false
+	end
+
+	def self.player_turn(player, tic_tac_toe)
 		flag = false
 		print "#{ player } is your turn, type a number "
 		number = gets.chomp
