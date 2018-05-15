@@ -10,7 +10,7 @@ class Player
 				flag = true
 				return number
 			else
-				print "Sorry try again"
+				puts "Sorry try again"
 				print "#{ player } is your turn, type a number "
 				number = gets.chomp
 			end
