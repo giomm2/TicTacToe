@@ -1,5 +1,5 @@
 class Player
-	attr_accessor :name, :computer, :player_turn
+	attr_accessor :name, :computer
 
 	def initialize(name)
 		@name = name
@@ -10,7 +10,7 @@ class Player
 		flag = false
 		print "#{ player } is your turn, type a number "
 		number = gets.chomp
-		while flag == false do 		
+		while flag == false do
 			if tic_tac_toe[number.to_i] == number
 				flag = true
 				return number
@@ -30,6 +30,6 @@ class Player
 				flag = true
 				return number
 			end
-		end	
+		end
 	end
 end
