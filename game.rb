@@ -15,8 +15,8 @@ require_relative 'detection.rb'
 	def player_information
 		players = create_players
 		player_by_turn = Array.new
-		players.each_with_index do |player, index|
-			puts "Player #{player.name} Do you want to be the computer: type 1"
+		players.each_with_index do |player,index|
+			puts "Player #{player.name} Do you want to be the computer type: 1 else #{players[index + 1].name} is going to be the computer"
 			if gets.to_i == 1
 				player.computer = true
 			else
@@ -74,10 +74,10 @@ require_relative 'detection.rb'
 			display_board(tic_tac_toe)
 			if Detection.check_all(tic_tac_toe,"#{ player_name }")
 				puts "Try again: yes"
-				if gets.chomp == "yes"
+				if gets == "yes"
 					start_game
 				else
-					puts "Thanks for playing!!!"
+					puts "Thanks for playing"
 					exit
 					return true
 				end
@@ -87,16 +87,16 @@ require_relative 'detection.rb'
 	end
 
 	def computer_turn(tic_tac_toe, player_name)
+		puts "#{player_name} (Computer) turn"
 			random = Player.computer_turn(tic_tac_toe)
 			tic_tac_toe[random] = "O"
-			puts "(Computer) #{player_name}number selected: #{random}"
 			display_board(tic_tac_toe)
 			if Detection.check_all(tic_tac_toe,"#{player_name} (Computer)")
 				puts "try again: yes"
 				if gets == "yes"
 					start_game
 				else
-					print "Thanks for playing!!!"
+					print "Thanks for playing"
 					exit
 					return true
 				end
