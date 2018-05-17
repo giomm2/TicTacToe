@@ -1,6 +1,6 @@
 ## TicTacToe 
 
-Tic tac toe is a game for everyone. Our mision is to create a single player tic tac toe. 
+Tic tac toe is a game for everyone. Our mision is to create a single player tic tac toe to play against the computer. 
 
 ## Getting started
 
@@ -15,9 +15,13 @@ This application has the following external dependencie:
 
 ## Running the game
 
-Go to terminal and write: 
+Go to terminal and run: 
 
 -ruby game.rb
+
+## Running the test
+
+We are using rspec as the testing framework. So just run 'rspec'
 
 ## Author
 
