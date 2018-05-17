@@ -7,17 +7,12 @@ class Player
   end
 
   def self.player_turn(player, tic_tac_toe)
-    flag = false
-    print "#{ player } is your turn, type a number "
-    number = gets.chomp
-    while flag == false do
+    number = selection(player)
+    loop do
       if tic_tac_toe[number.to_i] == number
-        flag = true
         return number
       else
-        puts "Sorry try again"
-        print "#{ player } is your turn, type a number "
-        number = gets.chomp
+        number = selection(player)
       end
     end
   end
@@ -31,5 +26,10 @@ class Player
         return number
       end
     end
+  end
+
+  def self.selection(player)
+    print "#{ player } is your turn, type a number "
+    number = gets.chomp
   end
 end

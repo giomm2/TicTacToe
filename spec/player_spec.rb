@@ -27,6 +27,14 @@ describe Player do
     end
   end
 
+  context "#player_turn" do
+    it "return the player selection" do
+      tic_tac_toe = ["X","1","X","X","X","X","X","X"]
+      player = Player.player_turn("test",tic_tac_toe)
+      expect(player).to eq "1"
+    end
+  end
+
   context "#computer_turn" do
     it "return the random selection" do
       tic_tac_toe = ["X","1","X","X","X","X","X","X"]
